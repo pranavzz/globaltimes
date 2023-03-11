@@ -1,0 +1,76 @@
+{
+  "status": "ok",
+  "totalResults": 7,
+  "articles": [
+    {
+      "source": { "id": "cnn", "name": "CNN" },
+      "author": "Josh Campbell, Fidel Gutierrez, Karol Suarez, Elizabeth Wolfe",
+      "title": "Bodies of 2 Mexico kidnapping victims expected to be returned to the US for further autopsies, source says - CNN",
+      "description": "The bodies of two Americans killed in an armed kidnapping in Mexico are expected to be returned to the US on Thursday, a source from the Mexico Attorney General's Office tells CNN, after two survivors of the attack returned to the US for treatment at a hospit…",
+      "url": "https://www.cnn.com/2023/03/09/us/mexico-matamoros-americans-kidnapped-thursday/index.html",
+      "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/230308085706-woodard-brown-mexico-kidnapping-victims-split.jpg?c=16x9&q=w_800,c_fill",
+      "publishedAt": "2023-03-09T13:20:00Z",
+      "content": "The bodies of two Americans killed in an armed kidnapping in Mexico are expected to be returned to the US on Thursday, a source from the Mexico Attorney Generals Office tells CNN, after two survivors… [+7362 chars]"
+    },
+    {
+      "source": { "id": "cnn", "name": "CNN" },
+      "author": "Morgan Rimmer",
+      "title": "Mitch McConnell hospitalized after fall in hotel - CNN",
+      "description": "Senate Minority Leader Mitch McConnell has been hospitalized after a fall at a hotel in Washington, DC.",
+      "url": "https://www.cnn.com/2023/03/09/politics/mitch-mcconnell-hospitalized/index.html",
+      "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/230309130220-01-mitch-mcconnell-0307.jpg?c=16x9&q=w_800,c_fill",
+      "publishedAt": "2023-03-09T12:16:00Z",
+      "content": "Senate Minority Leader Mitch McConnell has been hospitalized after a fall at a hotel in Washington, DC.\r\nThis evening, Leader McConnell tripped at a local hotel during a private dinner. He has been a… [+1119 chars]"
+    },
+    {
+      "source": { "id": "cnn", "name": "CNN" },
+      "author": "Katie Hunt",
+      "title": "Scientists have revived a 'zombie' virus that spent 48,500 years frozen in permafrost - CNN",
+      "description": "Warmer temperatures in the Arctic are thawing the region's permafrost — a frozen layer of soil beneath the ground — and potentially stirring viruses that, after lying dormant for tens of thousands of years, could endanger animal and human health.",
+      "url": "https://www.cnn.com/2023/03/08/world/permafrost-virus-risk-climate-scn/index.html",
+      "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/230301130350-06-permafrost-virus-risk-climate-virus.jpg?c=16x9&q=w_800,c_fill",
+      "publishedAt": "2023-03-08T13:35:00Z",
+      "content": "Sign up for CNNs Wonder Theory science newsletter. Explore the universe with news on fascinating discoveries, scientific advancements and more.\r\nWarmer temperatures in the Arctic are thawing the regi… [+9612 chars]"
+    },
+    {
+      "source": { "id": "fox-sports", "name": "Fox Sports" },
+      "author": null,
+      "title": "Shohei Ohtani, Japan dominate China: WBC live updates and score - FOX Sports",
+      "description": "Shohei Ohtani and Team Japan defeated China 8-1 in the first round of the World Baseball Classic. These are the top plays!",
+      "url": "https://www.foxsports.com/stories/mlb/shohei-ohtani-japan-dominate-china-wbc-live-updates-and-score",
+      "urlToImage": "https://a57.foxsports.com/statics.foxsports.com/www.foxsports.com/content/uploads/2023/03/1408/814/WBC.jpg?ve=1&tl=1",
+      "publishedAt": "2023-03-09T13:50:19Z",
+      "content": "The World Baseball Classic continued Thursday morning as Los Angeles Angels two-way star Shohei Ohtani and Team Japan showed why they're one of the event's favorites against Team China.\r\nOhtani hurle… [+2545 chars]"
+    },
+    {
+      "source": { "id": null, "name": "CBS Sports" },
+      "author": "",
+      "title": "College basketball coaching changes 2023 tracker: Jim Boeheim out at Syracuse, Texas Tech's Mark Adams resigns - CBS Sports",
+      "description": "Wednesday also brought news that Chris Beard is involved and being seriously considered at Ole Miss",
+      "url": "https://www.cbssports.com/college-basketball/news/college-basketball-coaching-changes-2023-tracker-jim-boeheim-out-at-syracuse-texas-techs-mark-adams-resigns/",
+      "urlToImage": "https://sportshub.cbsistatic.com/i/r/2023/02/05/19221ea4-f6be-4969-b303-3c66f0741893/thumbnail/1200x675/6e01df0e73ab737f006d08486155620f/usatsi-19439910-1.jpg",
+      "publishedAt": "2023-03-09T06:11:00Z",
+      "content": "Wednesday was a huge day in college basketball in off-the-court news, as it brought the next major phase of the carousel: Jim Boeheim's time at Syracuse coming to an end after 47 years as the head co… [+1962 chars]"
+    },
+    {
+      "source": { "id": "cbs-news", "name": "CBS News" },
+      "author": "Pamela Falk, Tucker Reals",
+      "title": "Russia says renewing grain export deal with Ukraine \"complicated\" after U.N. chief calls the pact \"critical\" - CBS News",
+      "description": "The agreement, which has helped ease a global food cost crisis, must be renewed by mid-March, but with the war raging, it's unclear if Russia will sign on again.",
+      "url": "https://www.cbsnews.com/news/ukraine-news-russia-war-grain-deal-complicated-lavrov-food-shipments-black-sea/",
+      "urlToImage": "https://assets3.cbsnewsstatic.com/hub/i/r/2023/03/09/bbe0a4d1-08a5-4849-8628-dc34a08431af/thumbnail/1200x630/0a0ab3687e22a34edc4e824fb18e2965/ukraine-russia-grain-1243909327.jpg",
+      "publishedAt": "2023-03-09T13:52:00Z",
+      "content": "United Nations — Russia's top diplomat said Thursday that it would be \"quite complicated\" for Moscow to sign onto a renewal of the deal struck between his country and Ukraine last year that has allow… [+5043 chars]"
+    },
+    {
+      "source": { "id": "independent", "name": "Independent" },
+      "author": "Josh Marcus",
+      "title": "Tucker Carlson calls critics ‘sociopaths’ and accuses Merrick Garland of lying about Jan 6 officer deaths - The Independent",
+      "description": "Broadcast also casts doubt on relevancy of Washington police officers who died by suicide after Capitol riot",
+      "url": "https://www.independent.co.uk/news/world/americas/us-politics/tucker-carlson-tonight-jan-6-b2297285.html",
+      "urlToImage": "https://static.independent.co.uk/2023/03/07/14/Screenshot%202023-03-07%20at%209.42.06%20AM.png?quality=75&width=1200&auto=webp",
+      "publishedAt": "2023-03-09T04:44:09Z",
+      "content": "Sign up for the daily Inside Washington email for exclusive US coverage and analysis sent to your inbox\r\nGet our free Inside Washington email\r\nTucker Carlson blasted his bipartisan critics in Congres… [+2183 chars]"
+    }
+  ]
+}
