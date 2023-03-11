@@ -20,7 +20,8 @@ export default class App extends Component {
      </div>
      
      <div>
-      <News></News>
+      {/* pageSize is prop */}
+      <News pageSize={6}></News>
      </div>
 
      <div>

@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import Newsitem from "../Newsitem/Newsitem";
+import Spinner from "../Spinner/Spinner";
 
 export class News extends Component {
   articles = [];
   constructor() {
+
+    //super denotes that this constructor is of super class
     super();
     console.log("I am a constructor");
     this.state = {
@@ -15,12 +18,17 @@ export class News extends Component {
 
   async componentDidMount() {
     let url =
-      "https://newsapi.org/v2/top-headlines?country=in&apiKey=347f9d964dbf466b895c8b0329c7f8ba&page=1&pagesize=6";
-    let data = await fetch(url);
+      `https://newsapi.org/v2/top-headlines?country=in&apiKey=347f9d964dbf466b895c8b0329c7f8ba&page=1&pagesize=${this.props.pageSize}`;
+    
+      this.setState({loading:true});
+      let data = await fetch(url);
+    // fetch api used to reach the endpoints
+
     let parseddata = await data.json();
     this.setState({
       articles: parseddata.articles,
       totalResults: parseddata.totalResults,
+      loading: false
     });
   }
 
@@ -29,38 +37,44 @@ export class News extends Component {
   handleprevbtn = async () => {
     let url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=347f9d964dbf466b895c8b0329c7f8ba&page=${
       this.state.page - 1
-    }&pagesize=6`;
+    }&pagesize=${this.props.pageSize}`;
+    this.setState({loading:true});
     let data = await fetch(url);
     let parseddata = await data.json();
     this.setState({
       page: this.state.page - 1,
       articles: parseddata.articles,
+      loading: false
     });
   };
   handlenextbtn = async () => {
     // this are backticks
-    if (this.state.page +1> Math.ceil(this.state.totalResults / 6)) {
+    if (this.state.page +1> Math.ceil(this.state.totalResults / this.props.pageSize)) {
 
     }
     
     else {
-      let url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=347f9d964dbf466b895c8b0329c7f8ba&page=${this.state.page + 1}&pagesize=6`;
+      let url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=347f9d964dbf466b895c8b0329c7f8ba&page=${this.state.page + 1}&pagesize=${this.props.pageSize}`;
+      this.setState({loading:true});
       let data = await fetch(url);
       let parseddata = await data.json();
       this.setState({
         page: this.state.page + 1,
         articles: parseddata.articles,
+        loading:false
       });
     }
   };
+
   render() {
     return (
       <div className="container mx-auto px-10 py-10">
         <div className="container my-5">
-          <div className="head">
+          <div className="flex justify-center items-center" id="head">
             <b>Global times - Top headlines</b>
           </div>
-
+          <br/>
+          {this.state.loading && <Spinner></Spinner>}
           <div className="grid grid-cols-3 gap-10">
             {this.state.articles.map((element) => {
               return (
@@ -76,7 +90,7 @@ export class News extends Component {
             })}
           </div>
         </div>
-
+        {this.state.loading && <Spinner></Spinner>}
         <br />
         <div className="flex justify-center items-center">
           <div className="inline-flex">
