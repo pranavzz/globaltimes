@@ -1,8 +1,22 @@
 import React, { Component } from "react";
 import Newsitem from "../Newsitem/Newsitem";
 import Spinner from "../Spinner/Spinner";
+import PropTypes from 'prop-types'
+
 
 export class News extends Component {
+
+  static defaultProps={
+    name:'in',
+    pageSize:3,
+    category:'general'
+  }
+  static propTypes={
+    country : PropTypes.string,
+    pageSize :PropTypes.number,
+    // here we set validation for props going
+  }
+
   articles = [];
   constructor() {
 
@@ -18,7 +32,7 @@ export class News extends Component {
 
   async componentDidMount() {
     let url =
-      `https://newsapi.org/v2/top-headlines?country=in&apiKey=347f9d964dbf466b895c8b0329c7f8ba&page=1&pagesize=${this.props.pageSize}`;
+      `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=347f9d964dbf466b895c8b0329c7f8ba&page=1&pagesize=${this.props.pageSize}`;
     
       this.setState({loading:true});
       let data = await fetch(url);
@@ -35,7 +49,7 @@ export class News extends Component {
   // handles previous button
   // will change the state and will increment
   handleprevbtn = async () => {
-    let url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=347f9d964dbf466b895c8b0329c7f8ba&page=${
+    let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=347f9d964dbf466b895c8b0329c7f8ba&page=${
       this.state.page - 1
     }&pagesize=${this.props.pageSize}`;
     this.setState({loading:true});
@@ -54,7 +68,7 @@ export class News extends Component {
     }
     
     else {
-      let url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=347f9d964dbf466b895c8b0329c7f8ba&page=${this.state.page + 1}&pagesize=${this.props.pageSize}`;
+      let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=347f9d964dbf466b895c8b0329c7f8ba&page=${this.state.page + 1}&pagesize=${this.props.pageSize}`;
       this.setState({loading:true});
       let data = await fetch(url);
       let parseddata = await data.json();
@@ -75,7 +89,7 @@ export class News extends Component {
           </div>
           <br/>
           {this.state.loading && <Spinner></Spinner>}
-          <div className="grid grid-cols-3 gap-10">
+          <div className="grid grid-cols-3 gap-1">
             {this.state.articles.map((element) => {
               return (
                 <div className="" key={element.url}>
