@@ -24,7 +24,6 @@ export default class App extends Component {
      <div>
       <Navbar></Navbar>
      </div>
-
      
       <Routes>
         {/* For path="/" its the home page for which i will pass props as general category */}
