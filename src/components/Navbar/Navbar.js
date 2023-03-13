@@ -1,12 +1,13 @@
 import React, { Component } from "react";
-// import { Link } from "react-router-dom";
+import { NavLink, NavNavLink } from "react-router-dom";
 
-export class Navbar extends Component {
-  render() {
-    return (
-      <>
-        <nav className="bg-gray-800">
-          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+export default function Navbar() {
+  return (
+    <div>
+       <nav className="bg-gray-800" >
+          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8" style={{
+                    
+                }}>
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 <button
@@ -63,40 +64,50 @@ export class Navbar extends Component {
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
-                    <a
-                      href="/"
-                      className="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
-                      aria-current="page"
-                    >
-                      Global Times
-                    </a>
-
-                    <a
-                      href="/business"
+                    <NavLink
+                      to="/"
                       className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                      style={({ isActive }) => ({ 
+                        color: isActive ? 'greenyellow' : 'white' })}
+                    >
+                      
+                      Global Times
+                    </NavLink>
+
+                    <NavLink
+                      to="/business"
+                      className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                      style={({ isActive }) => ({ 
+                        color: isActive ? 'greenyellow' : 'white' })}
                     >
                       Business
-                    </a>
+                    </NavLink>
 
-                    <a
-                      href="/entertainment"
+                    <NavLink
+                       to="/sports"
                       className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                    >
-                      Entertainment
-                    </a>
-
-                    <a
-                      href="/sports"
-                      className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                      style={({ isActive }) => ({ 
+                        color: isActive ? 'greenyellow' : 'white' })}
                     >
                       Sports
-                    </a>
-                    <a
-                      href="/technology"
+                    </NavLink>
+                    <NavLink
+                       to="/technology"
                       className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                      style={({ isActive }) => ({ 
+                        color: isActive ? 'greenyellow' : 'white' })}
                     >
                       Technology
-                    </a>
+                    </NavLink>
+                    <NavLink
+                       to="/entertainment"
+                      className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                      style={({ isActive }) => ({ 
+                        color: isActive ? 'greenyellow' : 'white' })}
+                    >
+                      Entertainment
+                    </NavLink>
+
                   </div>
                 </div>
               </div>
@@ -149,7 +160,7 @@ export class Navbar extends Component {
           <div className="sm:hidden" id="mobile-menu">
             <div className="space-y-1 px-2 pt-2 pb-3">
               <a
-                href="/"
+                to="/"
                 className="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
                 aria-current="page"
               >
@@ -157,21 +168,21 @@ export class Navbar extends Component {
               </a>
 
               <a
-                href="/"
+                to="/"
                 className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
               >
                 Team
               </a>
 
               <a
-                href="/"
+                to="/"
                 className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
               >
                 Projects
               </a>
 
               <a
-                href="/"
+                to="/"
                 className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
               >
                 Calendar
@@ -179,9 +190,10 @@ export class Navbar extends Component {
             </div>
           </div>
         </nav>
-      </>
-    );
-  }
+      
+    </div>
+  )
 }
 
-export default Navbar;
+
+

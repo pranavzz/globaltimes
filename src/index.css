@@ -15,3 +15,8 @@ code {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 40px;
 }
+
+.active{
+  color: #fff;
+  background-color: #00000065;
+}
