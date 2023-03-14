@@ -3,7 +3,10 @@ import React, { Component } from "react";
 export class Newsitem extends Component {
 
   render() {
-    const {title,description,imgurl,newsurl} = this.props;
+    const {title,description,imgurl,newsurl,publishdate,author,src} = this.props;
+    // const a = {publishdate};
+    // const d = new Date(a)
+    
     return (
       <div>
         <br/>
@@ -19,10 +22,18 @@ export class Newsitem extends Component {
             <a href="/">
               <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                 {title}
+                <br/>
+                 <span class="bg-yellow-100 text-yellow-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">{src}</span>
               </h5>
             </a>
             <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-              {description}
+              {description} 
+
+              <div className="published-date">
+                  <p>
+                  <small>By {author} on {new Date(publishdate).toGMTString()}</small>
+                    </p>
+                  </div>
             </p>
             <a
               href={newsurl}
