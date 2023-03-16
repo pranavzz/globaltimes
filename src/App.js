@@ -7,7 +7,6 @@ import News from './components/News/News';
 import Footer from './components/Footer/Footer';
 // import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Link } from "react-router-dom";
 
 // import PropTypes from 'prop-types'
 // this is a class based component
@@ -20,7 +19,7 @@ export default class App extends Component {
     return (
       <>
       <div>
-      {/* <Router> */}
+    
      <div>
       <Navbar></Navbar>
      </div>
@@ -34,11 +33,10 @@ export default class App extends Component {
         <Route exact path="/technology" element={<News key="technology"  pageSize={6} country="in" category="technology"></News>}></Route>
       </Routes >
     
-
      <div>
       <Footer></Footer>
      </div>
-      {/* </Router> */}
+    
       </div>
       </>
     );

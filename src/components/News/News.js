@@ -61,6 +61,11 @@ export class News extends Component {
       loading: false
     });
   };
+
+  capital = (string)=>{
+    return string.charAt(0).toUpperCase() + string.slice(1);
+    // capitalizes the first character and concatenates with the remaining string
+  }
   handlenextbtn = async () => {
     // this are backticks
     if (this.state.page +1> Math.ceil(this.state.totalResults / this.props.pageSize)) {
@@ -85,7 +90,7 @@ export class News extends Component {
       <div className="container mx-auto px-10 py-10">
         <div className="container my-5">
           <div className="flex justify-center items-center" id="head">
-            <b>Global times - Top headlines</b>
+            <b>Global Times - {this.capital(this.props.category)} Top headlines </b>
           </div>
           <br/>
           {this.state.loading && <Spinner></Spinner>}
